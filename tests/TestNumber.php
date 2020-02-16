@@ -1,8 +1,8 @@
-<?php namespace Propaganistas\LaravelIntl\Tests;
+<?php namespace RafaHernandez\LaravelIntl\Tests;
 
 use Orchestra\Testbench\TestCase;
-use Propaganistas\LaravelIntl\Facades\Number;
-use Propaganistas\LaravelIntl\IntlServiceProvider;
+use RafaHernandez\LaravelIntl\Facades\Number;
+use RafaHernandez\LaravelIntl\IntlServiceProvider;
 
 class TestNumber extends TestCase
 {
@@ -25,7 +25,7 @@ class TestNumber extends TestCase
     public function testHelper()
     {
         $this->assertEquals('1,234', number(1234));
-        $this->assertEquals('Propaganistas\LaravelIntl\Number', get_class(number()));
+        $this->assertEquals('RafaHernandez\LaravelIntl\Number', get_class(number()));
     }
 
     public function testHelperIsInSyncWithFacade()

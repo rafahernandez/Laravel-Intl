@@ -1,8 +1,8 @@
-<?php namespace Propaganistas\LaravelIntl\Tests;
+<?php namespace RafaHernandez\LaravelIntl\Tests;
 
 use Illuminate\Support\Facades\Date;
 use Orchestra\Testbench\TestCase;
-use Propaganistas\LaravelIntl\IntlServiceProvider;
+use RafaHernandez\LaravelIntl\IntlServiceProvider;
 
 class TestDate extends TestCase
 {

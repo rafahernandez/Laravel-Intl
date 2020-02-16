@@ -1,12 +1,12 @@
 <?php
 
-namespace Propaganistas\LaravelIntl;
+namespace RafaHernandez\LaravelIntl;
 
 use CommerceGuys\Intl\Formatter\NumberFormatter;
 use CommerceGuys\Intl\NumberFormat\NumberFormatRepository;
 use Illuminate\Support\Arr;
-use Propaganistas\LaravelIntl\Concerns\WithLocales;
-use Propaganistas\LaravelIntl\Contracts\Intl;
+use RafaHernandez\LaravelIntl\Concerns\WithLocales;
+use RafaHernandez\LaravelIntl\Contracts\Intl;
 
 class Number extends Intl
 {

@@ -1,8 +1,8 @@
-<?php namespace Propaganistas\LaravelIntl\Tests;
+<?php namespace RafaHernandez\LaravelIntl\Tests;
 
 use Orchestra\Testbench\TestCase;
-use Propaganistas\LaravelIntl\Facades\Language;
-use Propaganistas\LaravelIntl\IntlServiceProvider;
+use RafaHernandez\LaravelIntl\Facades\Language;
+use RafaHernandez\LaravelIntl\IntlServiceProvider;
 
 class TestLanguage extends TestCase
 {
@@ -30,7 +30,7 @@ class TestLanguage extends TestCase
     public function testHelper()
     {
         $this->assertEquals('Dutch', language('nl'));
-        $this->assertEquals('Propaganistas\LaravelIntl\Language', get_class(language()));
+        $this->assertEquals('RafaHernandez\LaravelIntl\Language', get_class(language()));
     }
 
     public function testHelperIsInSyncWithFacade()

@@ -1,8 +1,8 @@
-<?php namespace Propaganistas\LaravelIntl\Tests;
+<?php namespace RafaHernandez\LaravelIntl\Tests;
 
 use Orchestra\Testbench\TestCase;
-use Propaganistas\LaravelIntl\Facades\Currency;
-use Propaganistas\LaravelIntl\IntlServiceProvider;
+use RafaHernandez\LaravelIntl\Facades\Currency;
+use RafaHernandez\LaravelIntl\IntlServiceProvider;
 
 class TestCurrency extends TestCase
 {
@@ -25,7 +25,7 @@ class TestCurrency extends TestCase
     public function testHelper()
     {
         $this->assertEquals('US Dollar', currency('USD'));
-        $this->assertEquals('Propaganistas\LaravelIntl\Currency', get_class(currency()));
+        $this->assertEquals('RafaHernandez\LaravelIntl\Currency', get_class(currency()));
         $this->assertEquals('€1,234.00', currency(1234, 'EUR'));
     }
 
