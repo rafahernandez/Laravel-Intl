@@ -1,5 +1,12 @@
 # Laravel Intl
 
+[![Build Status](https://api.travis-ci.com/rafahernandez/Laravel-Intl.svg?branch=master)](https://travis-ci.com/rafahernandez/Laravel-Intl)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/rafahernandez/Laravel-Intl/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/rafahernandez/Laravel-Intl/?branch=master)
+[![Code Coverage](https://scrutinizer-ci.com/g/rafahernandez/Laravel-Intl/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/rafahernandez/Laravel-Intl/?branch=master)
+[![Latest Stable Version](https://poser.pugx.org/rafahernandez/laravel-intl/v/stable)](https://packagist.org/packages/rafahernandez/laravel-intl)
+[![Total Downloads](https://poser.pugx.org/rafahernandez/laravel-intl/downloads)](https://packagist.org/packages/rafahernandez/laravel-intl)
+[![License](https://poser.pugx.org/rafahernandez/laravel-intl/license)](https://packagist.org/packages/rafahernandez/laravel-intl)
+
 > This is a fork of the archived package by Propaganistas 
 
 Easy to use internationalization functions for Laravel 5 and Lumen based on various libraries for easy retrieval of
