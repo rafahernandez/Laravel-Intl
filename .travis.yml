@@ -4,6 +4,7 @@ php:
   - 7.1
   - 7.2
   - 7.3
+  - 7.4
 
 cache:
   directories:
@@ -15,6 +16,8 @@ matrix:
     - php: 7.3
       env: ILLUMINATE_VERSION=5.8.* TESTBENCH_VERSION=3.8.* PHPUNIT_VERSION=8.*
     - php: 7.3
+      env: ILLUMINATE_VERSION=6.* TESTBENCH_VERSION=4.* PHPUNIT_VERSION=8.*
+    - php: 7.4
       env: ILLUMINATE_VERSION=6.* TESTBENCH_VERSION=4.* PHPUNIT_VERSION=8.*
 
 sudo: false
