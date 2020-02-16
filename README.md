@@ -1,11 +1,6 @@
 # Laravel Intl
 
-[![Build Status](https://travis-ci.org/Propaganistas/Laravel-Intl.svg?branch=master)](https://travis-ci.org/Propaganistas/Laravel-Intl)
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/Propaganistas/Laravel-Intl/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/Propaganistas/Laravel-Intl/?branch=master)
-[![Code Coverage](https://scrutinizer-ci.com/g/Propaganistas/Laravel-Intl/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/Propaganistas/Laravel-Intl/?branch=master)
-[![Latest Stable Version](https://poser.pugx.org/propaganistas/laravel-intl/v/stable)](https://packagist.org/packages/propaganistas/laravel-intl)
-[![Total Downloads](https://poser.pugx.org/propaganistas/laravel-intl/downloads)](https://packagist.org/packages/propaganistas/laravel-intl)
-[![License](https://poser.pugx.org/propaganistas/laravel-intl/license)](https://packagist.org/packages/propaganistas/laravel-intl)
+> This is a fork of the archived package by Propaganistas 
 
 Easy to use internationalization functions for Laravel 5 and Lumen based on various libraries for easy retrieval of
 localized values and formatting of numeric values into their localized patterns.
@@ -26,7 +21,7 @@ localized values and formatting of numeric values into their localized patterns.
 Run the following command to install the latest version of the package
 
 ```bash
-composer require propaganistas/laravel-intl
+composer require rafahernandez/laravel-intl
 ```
 
 #### Laravel
@@ -35,7 +30,7 @@ If you don't use auto-discovery, open up your app config and add the Service Pro
  ```php
 'providers' => [
     ...
-    Propaganistas\LaravelIntl\IntlServiceProvider::class,
+    rafahernandez\LaravelIntl\IntlServiceProvider::class,
 ],
 ```
 
@@ -43,7 +38,7 @@ If you don't use auto-discovery, open up your app config and add the Service Pro
 In `bootstrap/app.php`, register the Service Provider
 
  ```php
-$app->register(Propaganistas\LaravelIntl\IntlServiceProvider::class);
+$app->register(RafaHernandez\LaravelIntl\IntlServiceProvider::class);
 ```
 
 ### Usage
@@ -54,7 +49,7 @@ $app->register(Propaganistas\LaravelIntl\IntlServiceProvider::class);
 
 Output localized country names.
 ```php
-use Propaganistas\LaravelIntl\Facades\Country;
+use RafaHernandez\LaravelIntl\Facades\Country;
 
 // Application locale: nl
 Country::name('US'); // Verenigde Staten
@@ -72,7 +67,7 @@ country()->all(); // ['US' => 'United States', 'BE' => 'Belgium', ...]
 Output localized currency names and format currency amounts into their localized pattern.
 
 ```php
-use Propaganistas\LaravelIntl\Facades\Currency;
+use RafaHernandez\LaravelIntl\Facades\Currency;
 
 // Application locale: nl
 Currency::name('USD'); // Amerikaanse dollar
@@ -93,7 +88,7 @@ currency()->all(); // ['USD' => 'US Dollar', 'EUR' => 'Euro', ...]
 Parse localized values into native PHP numbers.
 
 ```php
-use Propaganistas\LaravelIntl\Facades\Currency;
+use RafaHernandez\LaravelIntl\Facades\Currency;
 
 // Application locale: nl
 Currency::parse('€ 1.234,50'); // 1234.5
@@ -139,7 +134,7 @@ $date->toFullDatetimeString();
 Output localized language names.
 
 ```php
-use Propaganistas\LaravelIntl\Facades\Language;
+use RafaHernandez\LaravelIntl\Facades\Language;
 
 // Application locale: nl
 Language::name('en'); // Engels
@@ -157,7 +152,7 @@ language()->all(); // ['en' => 'English', 'nl' => 'Dutch', ...]
 Output localized numeric values into their localized pattern.
 
 ```php
-use Propaganistas\LaravelIntl\Facades\Number;
+use RafaHernandez\LaravelIntl\Facades\Number;
 
 // Application locale: en
 Number::format(1000); // '1,000'
@@ -173,7 +168,7 @@ number()->percent('0.75'); // '75 %'
 Parse localized values into native PHP numbers.
 
 ```php
-use Propaganistas\LaravelIntl\Facades\Number;
+use RafaHernandez\LaravelIntl\Facades\Number;
 
 // Application locale: fr
 Number::parse('1 000'); // 1000
