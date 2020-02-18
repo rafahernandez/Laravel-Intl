@@ -112,28 +112,26 @@ Just use `Illuminate\Support\Facades\Date`.
 
 Additional methods are also available to output localized common date formats. E.g. `toShortDateString()`:
 
-* Locale "en": 1/31/2018
-* Locale "nl": 31-01-2018
+* Locale "en": 2/18/20
+* Locale "es": 18/2/20
 
 ````php
-use Illuminate\Support\Facades\Date;
+$date = Carbon\Carbon::parse("2020-02-18T19:13:24+00:00");
 
-$date = Date::now(); // or carbon()->now()
+$date->toShortDateString();  // es: "18/2/20" - en: "2/18/20"
+$date->toMediumDateString(); // es: "18 feb. 2020" - en: "Feb 18, 2020"
+$date->toLongDateString();   // es: "18 de febrero de 2020"  - en: "February 18, 2020"
+$date->toFullDateString();   // es: "martes, 18 de febrero de 2020" - en: "Tuesday, February 18, 2020"
 
-$date->toShortDateString();
-$date->toMediumDateString();
-$date->toLongDateString();
-$date->toFullDateString();
+$date->toShortTimeString();  // es: "19:13" - en: "7:13 PM"
+$date->toMediumTimeString(); // es: "19:13:24" - en: "7:13:24 PM"
+$date->toLongTimeString();   // es: "19:13:24 GMT+0"  - en: "7:13:24 PM GMT+0"
+$date->toFullTimeString();   // es: "19:13:24 (GMT+00:00)" - en: "7:13:24 PM GMT+00:00"
 
-$date->toShortTimeString();
-$date->toMediumTimeString();
-$date->toLongTimeString();
-$date->toFullTimeString();
-
-$date->toShortDatetimeString();
-$date->toMediumDatetimeString();
-$date->toLongDatetimeString();
-$date->toFullDatetimeString();
+$date->toShortDatetimeString();  // es: "18/2/20 19:13" - en: "2/18/20, 7:13 PM"
+$date->toMediumDatetimeString(); // es: "18 feb. 2020 19:13:24" - en: "Feb 18, 2020, 7:13:24 PM"
+$date->toLongDatetimeString();   // es: "18 de febrero de 2020, 19:13:24 GMT+0" - en: "February 18, 2020 at 7:13:24 PM GMT+0"
+$date->toFullDatetimeString();   // es: "martes, 18 de febrero de 2020, 19:13:24 (GMT+00:00)" - en: "Tuesday, February 18, 2020 at 7:13:24 PM GMT+00:00"
 ````
 
 #### Language
