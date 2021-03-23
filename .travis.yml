@@ -22,7 +22,7 @@ matrix:
     - php: 7.4
       env: ILLUMINATE_VERSION=7.* TESTBENCH_VERSION=5.* PHPUNIT_VERSION=8.5
     - php: 7.4
-      env: ILLUMINATE_VERSION=8.* TESTBENCH_VERSION=5.* PHPUNIT_VERSION=9.3
+      env: ILLUMINATE_VERSION=8.* TESTBENCH_VERSION=6.* PHPUNIT_VERSION=9.3
 
 sudo: false
 
@@ -48,7 +48,7 @@ script:
   # Re-enable XDebug.
   - phpenv config-add /tmp/xdebug.ini
   # Run the tests.
-  - vendor/bin/phpunit --coverage-clover=coverage.clover
+  - XDEBUG_MODE=coverage vendor/bin/phpunit --coverage-clover=coverage.clover
 
 after_script:
   # Send test results to Scrutinizer.
